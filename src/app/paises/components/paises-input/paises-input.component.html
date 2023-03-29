@@ -1,0 +1,10 @@
+<form (ngSubmit)="buscarPais()">
+    <input 
+           autocomplete="off"
+           type="text"
+           name="termino" 
+           class="form-control"
+           [placeholder]="placeholder"
+           [(ngModel)]="pais"
+           (input)="teclaPresionada()">
+</form>

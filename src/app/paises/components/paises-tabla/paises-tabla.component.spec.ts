@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerPaisComponent } from './ver-pais.component';
+import { PaisesTablaComponent } from './paises-tabla.component';
 
-describe('VerPaisComponent', () => {
-  let component: VerPaisComponent;
-  let fixture: ComponentFixture<VerPaisComponent>;
+describe('PaisesTablaComponent', () => {
+  let component: PaisesTablaComponent;
+  let fixture: ComponentFixture<PaisesTablaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerPaisComponent ]
+      declarations: [ PaisesTablaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VerPaisComponent);
+    fixture = TestBed.createComponent(PaisesTablaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

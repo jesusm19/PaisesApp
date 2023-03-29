@@ -1,1 +1,29 @@
-<p>por-capital works!</p>
+<h2>Por Capital</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- Fomulario -->
+        <app-paises-input 
+            (onEnter)="buscarCapital( $event)"
+            [placeholder]="placeholder"
+        >
+        </app-paises-input>
+        <!-- Fin del fomulario -->
+    </div>
+</div>
+
+<hr>
+
+<div *ngIf="isError" 
+     class="alert alert-danger">
+    No se encontró nada con el término {{ pais }}
+</div>
+
+<div class="row" *ngIf="paises.length > 0">
+    <div class="col">
+        <!-- Tabla-->
+        <app-paises-tabla [paises]="paises"></app-paises-tabla>
+        <!-- Fin de la tabla-->
+    </div>
+</div>
