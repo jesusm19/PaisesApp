@@ -1,19 +1,21 @@
-<h2>Por Capital</h2>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
+    <h2>Por Capital</h2>
+    <hr>
 
-<div class="row">
-    <div class="col">
-        <!-- Fomulario -->
-        <app-paises-input 
-            (onEnter)="buscarCapital( $event)"
-            [placeholder]="placeholder"
-        >
-        </app-paises-input>
-        <!-- Fin del fomulario -->
+    <div class="row">
+        <div class="col">
+            <!-- Fomulario -->
+            <app-paises-input 
+                (onEnter)="buscarCapital( $event)"
+                [placeholder]="placeholder"
+            >
+            </app-paises-input>
+            <!-- Fin del fomulario -->
+        </div>
     </div>
-</div>
 
-<hr>
+    <hr>
+</div>
 
 <div *ngIf="isError" 
      class="alert alert-danger">

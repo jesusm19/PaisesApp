@@ -1,20 +1,36 @@
-    <h2>Por país</h2>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
 
-<div class="row">
-    <div class="col">
-        <!-- Fomulario -->
-        <app-paises-input 
-            (onEnter)="buscarPais( $event)"
-            (onDebounce)="buscarSugerencias($event)"
-            [placeholder]="placeholder"
-        >
-        </app-paises-input>
-        <!-- Fin del fomulario -->
+    <h2>Por país</h2>
+    <hr>
+    
+    <div class="row">
+        <div class="col">
+            <!-- Fomulario -->
+            <app-paises-input 
+                (onEnter)="buscarPais( $event)"
+                (onDebounce)="buscarSugerencias($event)"
+                [placeholder]="placeholder"
+            >
+            </app-paises-input>
+            <!-- Fin del fomulario -->
+        </div>
     </div>
+
+    <ul class="list-group" *ngIf="paises.length <= 0">
+        <li *ngFor="let paisSugerido of paisesSugeridos"
+            class="list-group-item list-group-item-action">
+        
+            <a class="nav-link"
+                [routerLink]="['/pais', paisSugerido.cca2]">
+                    {{paisSugerido.name.common}}
+            </a>
+        </li>
+
+    </ul>
+    
+    <hr>
 </div>
 
-<hr>
 
 <div *ngIf="isError" 
      class="alert alert-danger">
