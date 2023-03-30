@@ -28,4 +28,9 @@ export class PaisesService {
     return this.http.get<Country[]>(url);
   }
 
+  buscarPaisesPorRegion(region: string): Observable<Country[]>{
+    const url = `${this.urlBase}/region/${region}`;
+    return this.http.get<Country[]>(url);
+  }
+
 }
